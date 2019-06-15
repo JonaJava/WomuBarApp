@@ -15,6 +15,9 @@ import { HomeComponent } from './home/home.component';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { NavbarComponent } from './Dashboard/navigatingBar/navbar/navbar.component';
 import { SidebarComponent } from './Dashboard/navigatingBar/sidebar/sidebar.component';
+import { ProfileComponent } from './Dashboard/sections/profile/profile.component';
+import { RouterModule } from '@angular/router';
+import { BuyComponent } from './Sections/buy/buy.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { SidebarComponent } from './Dashboard/navigatingBar/sidebar/sidebar.comp
     LoginComponent,
     HomeComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    ProfileComponent,
+    BuyComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,8 @@ import { SidebarComponent } from './Dashboard/navigatingBar/sidebar/sidebar.comp
     ToastrModule.forRoot({
       progressBar: true
     }),
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([])
   ],
   providers: [UserService, {
     provide: HTTP_INTERCEPTORS,

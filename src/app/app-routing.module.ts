@@ -5,17 +5,26 @@ import { UserComponent } from './user/user.component';
 import { RegistrationComponent } from './user/registration/registration.component';
 import { LoginComponent } from './user/login/login.component';
 import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './Dashboard/sections/profile/profile.component';
+import { BuyComponent } from './Sections/buy/buy.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'/user/login',pathMatch:'full'},
+  {path:'',redirectTo:'/user/login',pathMatch:'full' },
   {
-    path: 'user', component: UserComponent,
+    path: 'user',component: UserComponent,
     children: [
-      { path: 'registration', component: RegistrationComponent },
-      { path: 'login', component: LoginComponent }
+      { path: 'registration', component: RegistrationComponent  },
+      { path: 'login', component: LoginComponent },  
     ]
   },
-  {path:'home',component:HomeComponent,canActivate:[AuthGuard]}
+  {path:'home', component:HomeComponent,canActivate:[AuthGuard],
+  children: [
+    { path: '', component: ProfileComponent },
+    { path: 'buy', component: BuyComponent },
+  ]
+  },   
+  
+  
 ];
 
 @NgModule({
