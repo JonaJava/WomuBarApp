@@ -6,7 +6,8 @@ import { RegistrationComponent } from './user/registration/registration.componen
 import { LoginComponent } from './user/login/login.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './Dashboard/sections/profile/profile.component';
-import { BuyComponent } from './Sections/buy/buy.component';
+import { BuyComponent } from './Dashboard/Sections/buy/buy.component';
+import { MainComponent } from './Dashboard/Sections/main/main.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/user/login',pathMatch:'full' },
@@ -19,7 +20,8 @@ const routes: Routes = [
   },
   {path:'home', component:HomeComponent,canActivate:[AuthGuard],
   children: [
-    { path: '', component: ProfileComponent },
+    { path: '', component: MainComponent },
+    { path: 'profile', component: ProfileComponent },
     { path: 'buy', component: BuyComponent },
   ]
   },   

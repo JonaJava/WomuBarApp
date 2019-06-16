@@ -17,7 +17,8 @@ import { NavbarComponent } from './Dashboard/navigatingBar/navbar/navbar.compone
 import { SidebarComponent } from './Dashboard/navigatingBar/sidebar/sidebar.component';
 import { ProfileComponent } from './Dashboard/sections/profile/profile.component';
 import { RouterModule } from '@angular/router';
-import { BuyComponent } from './Sections/buy/buy.component';
+import { BuyComponent } from './Dashboard/Sections/buy/buy.component';
+import { MainComponent } from './Dashboard/Sections/main/main.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { BuyComponent } from './Sections/buy/buy.component';
     NavbarComponent,
     SidebarComponent,
     ProfileComponent,
-    BuyComponent
+    BuyComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

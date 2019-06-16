@@ -107,10 +107,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 a {
     color: #44a4cd;
+    
 }
 
 a:hover {
     color: #44a8cf;
+    background-color:white;
+
 }
 
 .shadow {
