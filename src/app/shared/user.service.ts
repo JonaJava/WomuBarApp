@@ -50,4 +50,8 @@ export class UserService {
   getUserProfile() {
     return this.http.get(this.BaseURI + '/UserProfile');
   }
+
+  getTableBar() {
+    return this.http.get(this.BaseURI + '/TableBar');
+  }
 }
