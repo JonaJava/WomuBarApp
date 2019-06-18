@@ -19,6 +19,7 @@ import { ProfileComponent } from './Dashboard/sections/profile/profile.component
 import { RouterModule } from '@angular/router';
 import { BuyComponent } from './Dashboard/Sections/buy/buy.component';
 import { MainComponent } from './Dashboard/Sections/main/main.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,9 @@ import { MainComponent } from './Dashboard/Sections/main/main.component';
       progressBar: true
     }),
     FormsModule,
-    RouterModule.forRoot([])
+    RouterModule,
+    MatDialogModule
+    
   ],
   providers: [UserService, {
     provide: HTTP_INTERCEPTORS,
